@@ -13,11 +13,19 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Setup PHP Action
+        # You may pin to the exact commit or the version.
+        # uses: shivammathur/setup-php@3f36c0511e6b5c06cdbb82f098b7a32ccf1a1203
+        uses: shivammathur/setup-php@2.9.0
+        with:
+          php-version: '8.0'
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: lastest
+          
+      - name: test
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          php -v
+          which composer
