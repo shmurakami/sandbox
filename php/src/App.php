@@ -7,10 +7,10 @@ class App
 {
     public function foo(bool $create): ?Foo
     {
-        return match($create) {
-            true => new Foo(),
-            false => null,
-        };
+        if ($create) {
+            return new Foo();
+        }
+        return null;
     }
 
     public function bar(?Foo $maybeFoo): string
