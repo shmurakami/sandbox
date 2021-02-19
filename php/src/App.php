@@ -13,7 +13,7 @@ class App
         return null;
     }
 
-    public function bar(?Foo $maybeFoo): string
+    public function bar(Foo $maybeFoo): string
     {
         return $this->buzz($maybeFoo);
     }
