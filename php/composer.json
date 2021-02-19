@@ -13,5 +13,9 @@
         "psr-4": {
             "shmurakami\\sandbox\\": "src/"
         }
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.6",
+        "orklah/psalm-strict-types": "^0.1.1"
     }
 }
