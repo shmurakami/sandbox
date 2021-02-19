@@ -29,6 +29,6 @@ jobs:
         run: composer --working-dir=$GITHUB_WORKSPACE/php install
 
       - name: test
-        run: $GITHUB_WORKSPACE/php/vendor/bin/psalm --php-version=7.3 --no-progress --output-format=github |reviewdog -f=psalm -fail-on-error -reporter github-pr-review
+        run: $GITHUB_WORKSPACE/php/vendor/bin/psalm -c $GITHUB_WORKSPACE/php/psalm.xml --php-version=7.3 --no-progress --output-format=github |reviewdog -f=psalm -fail-on-error -reporter github-pr-review
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
