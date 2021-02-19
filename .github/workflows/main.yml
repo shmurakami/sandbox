@@ -27,7 +27,7 @@ jobs:
           
       - name: test
         run: |
-          composer --working-dir=$GITHUB_ACTION_PATH/php install
-          composer --working-dir=$GITHUB_ACTION_PATH/php run psalm |reviewdog -f psalm -fail-on-error -reporter
+          composer --working-dir=$GITHUB_WORKSPACE/php install
+          composer --working-dir=$GITHUB_WORKSPACE/php run psalm |reviewdog -f psalm -fail-on-error -reporter
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
