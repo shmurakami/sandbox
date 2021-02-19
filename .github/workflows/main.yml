@@ -19,7 +19,7 @@ jobs:
         # uses: shivammathur/setup-php@3f36c0511e6b5c06cdbb82f098b7a32ccf1a1203
         uses: shivammathur/setup-php@2.9.0
         with:
-          php-version: '8.0'
+          php-version: '7.3'
 
       - uses: reviewdog/action-setup@v1
         with:
