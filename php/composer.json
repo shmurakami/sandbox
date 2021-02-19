@@ -19,6 +19,6 @@
         "orklah/psalm-strict-types": "^0.1.1"
     },
     "scripts": {
-        "psalm": "psalm --php-version=7.3 --no-progress --no-suggestions --output-format=github"
+        "psalm": "psalm --php-version=7.3 --no-progress --output-format=github"
     }
 }
