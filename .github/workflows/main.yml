@@ -23,7 +23,7 @@ jobs:
 
       - uses: reviewdog/action-setup@v1
         with:
-          reviewdog_version: lastest
+          reviewdog_version: latest
           
       - name: test
         run: |
