@@ -1,0 +1,24 @@
+{
+    "name": "shmurakami/sandbox",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shaka",
+            "email": "shmurakami1104@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "shmurakami\\sandbox\\": "src/"
+        }
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.6",
+        "orklah/psalm-strict-types": "^0.1.1"
+    },
+    "scripts": {
+        "psalm": "psalm --php-version=7.3 --no-progress --output-format=github"
+    }
+}
