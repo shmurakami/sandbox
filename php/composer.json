@@ -17,5 +17,8 @@
     "require-dev": {
         "vimeo/psalm": "^4.6",
         "orklah/psalm-strict-types": "^0.1.1"
+    },
+    "scripts": {
+        "psalm": "psalm --php-version=8.0 --show-info=true"
     }
 }
