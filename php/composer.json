@@ -1,0 +1,11 @@
+{
+    "name": "shmurakami/sandbox",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shaka",
+            "email": "shmurakami1104@gmail.com"
+        }
+    ],
+    "require": {}
+}
