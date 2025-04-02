@@ -17,6 +17,7 @@ jobs:
           echo "ENVS<<EOF" >> $GITHUB_ENV
           echo "$ENVS" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+          
       - name: check
         shell: bash
         run: |
