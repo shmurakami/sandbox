@@ -20,5 +20,5 @@ jobs:
       - name: check
         shell: bash
         run: |
-          FOO=$(printf "%s" |sed ':a;N;$!ba;s/\n/,/g')
+          FOO=$(printf "%s" $ENVS |sed ':a;N;$!ba;s/\n/,/g')
           echo $FOO
