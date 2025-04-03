@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: check
         run: |
-          which psql
+          which docker
+          docker run postgres:14.17-alpine3.20 pqsl --version
     #   - name: set
     #     run: |
     #       ENVS=$(cat << EOF
