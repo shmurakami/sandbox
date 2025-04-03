@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check
+        run: |
+          which docker
+          docker --version
+    #   - name: set
+    #     run: |
+    #       ENVS=$(cat << EOF
+    #       APP_MODE=PREVIEW
+    #       PR_NUMBER=${{ github.event.pull_request.number }}
+    #       EOF
+    #       )
+    #       echo "ENVS<<EOF" >> $GITHUB_ENV
+    #       echo "$ENVS" >> $GITHUB_ENV
+    #       echo "EOF" >> $GITHUB_ENV
+          
+    #   - name: check
+    #     shell: bash
+    #     run: |
+    #       FOO=$(sed ':a;N;$!ba;s/\n/,/g' <<< ${{ env.ENVS }})
+    #       echo $FOO
