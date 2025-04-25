@@ -5,19 +5,9 @@ on:
 
 jobs:
   test:
+    environment: test
     runs-on: ubuntu-latest
     steps:
-      - name: Set common environment variables
-        id: env-vars
+      - name: check variable
         run: |
-          cat << EOF > common.env.yaml
-          KEY: VAL
-          EOF
-          cp common.env.yaml test.env.yaml
-          echo "FOO: BAR" >> test.env.yaml
-      
-      - name: check
-        run: |
-          ls
-          cat common.env.yaml
-          cat test.env.yaml
+          echo value: ${{ vars.VALUE }}
