@@ -1,0 +1,19 @@
+name: checker
+inputs:
+  environment:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: foo
+      id: foo
+      shell: bash
+      outputs:
+        foo: 'bar'
+      run: |
+        echo foo
+    - name: checker check
+      shell: bash
+      run: |
+        echo ${{ steps.foo.outputs.foo }}
