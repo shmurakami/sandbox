@@ -9,4 +9,6 @@ runs:
     - name: checker check
       shell: bash
       run: |
-        echo value: $VALUE
+        env
+        echo value: ${{ vars.VALUE }}
+        
