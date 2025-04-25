@@ -13,4 +13,4 @@ jobs:
       - name: check variable
         uses: ./.github/actions/test
         with:
-          environment: invalid
+          environment: test
