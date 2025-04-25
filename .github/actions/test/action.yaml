@@ -5,8 +5,9 @@ inputs:
 
 runs:
   using: "composite"
+  environment: ${{ inputs.environment }}
   steps:
     - name: checker check
       shell: bash
       run: |
-        echo value: ${{ inputs.environment }}
+        echo value: ${{ vars.VALUE }}
