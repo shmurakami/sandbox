@@ -5,10 +5,10 @@ inputs:
 
 runs:
   using: "composite"
-  env:
-    VALUE: ${{ vars.VALUE }}
   steps:
     - name: checker check
+      env:
+        VALUE: ${{ vars.VALUE }}
       shell: bash
       run: |
         env
