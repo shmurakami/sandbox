@@ -10,5 +10,5 @@ runs:
       shell: bash
       run: |
         env
-        echo value: ${{ VALUE }}
+        echo value: ${{ vars.VALUE }}
         
