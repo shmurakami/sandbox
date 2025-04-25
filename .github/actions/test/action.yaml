@@ -1,0 +1,11 @@
+name: checker
+inputs:
+  environment:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: checker check
+      run: |
+        echo value: ${{ inputs.environment }}
