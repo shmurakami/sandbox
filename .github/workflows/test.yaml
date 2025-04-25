@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    environment: test
+    environment: check
     runs-on: ubuntu-latest
     steps:
       - name: check variable
