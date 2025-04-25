@@ -5,10 +5,12 @@ inputs:
 
 runs:
   using: "composite"
+  env:
+    VALUE: ${{ vars.VALUE }}
   steps:
     - name: checker check
       shell: bash
       run: |
         env
-        echo value: ${{ vars.VALUE }}
+        echo value: $VALUE
         
