@@ -7,5 +7,6 @@ runs:
   using: "composite"
   steps:
     - name: checker check
+      shell: bash
       run: |
         echo value: ${{ inputs.environment }}
