@@ -8,6 +8,7 @@ runs:
   steps:
     - name: foo
       id: foo
+      shell: bash
       outputs:
         foo: 'bar'
       run: |
