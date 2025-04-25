@@ -6,11 +6,13 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: foo
+      id: foo
+      outputs:
+        foo: 'bar'
+      run: |
+        echo foo
     - name: checker check
-      env:
-        VALUE: ${{ vars.VALUE }}
       shell: bash
       run: |
-        env
-        echo value: $VALUE
-        
+        echo ${{ steps.foo.outputs.foo }}
