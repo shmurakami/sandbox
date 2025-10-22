@@ -11,3 +11,5 @@ COPY pnpm-lock.yaml /app/pnpm-lock.yaml
 RUN pnpm fetch
 RUN pnpm install --prefer-offline --frozen-lockfile
 COPY ./app /app/app
+
+CMD ["node", "app/main.ts"]
