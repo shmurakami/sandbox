@@ -19,3 +19,5 @@ jobs:
           push: false
           context: src
           tags: shmurakami/sandbox-ts:latest
+          cache-from: type=gha,scope=main
+          cache-to: type=gha,scope=main,mode=max
